@@ -23,10 +23,10 @@ h1,h2,h3{font-family:"Literata",Georgia,serif;font-weight:600;line-height:1.2;ma
 h1{font-size:clamp(2rem,5vw,3rem)}
 h2{font-size:1.5rem}
 h3{font-size:1.1rem}
-p{margin:.6rem 0;max-width:66ch}
+p{margin:.6rem 0}
 p,.questions li,.pubs li,.status{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
-.hero p,.card .meta,.pi .facts,footer p,nav a{text-align:start;hyphens:manual}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.hero p,.card p,.pi p,footer p,nav a{text-align:start;hyphens:manual}
+.wrap{max-width:848px;margin:0 auto;padding:0 24px}
 header.top{border-bottom:1px solid var(--line)}
 nav{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between;padding:18px 0;font-size:.9rem}
 nav .brand{font-family:"Literata",serif;font-weight:600;font-size:1.05rem;color:var(--ink);text-decoration:none}
@@ -35,8 +35,13 @@ nav a{color:var(--ink-2);text-decoration:none}
 nav a:hover{color:var(--accent)}
 .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
 .eyebrow{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:14px}
-.hero .sub{font-family:"Literata",serif;font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:500;color:var(--ink-2);max-width:40ch;margin-top:18px}
+.hero .sub{font-family:"Literata",serif;font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:500;color:var(--ink-2);margin-top:18px}
 .hero .aff{margin-top:28px;font-size:.95rem;color:var(--ink-2)}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.emblem{margin:0}
+.emblem img{display:block;width:220px;height:220px;border-radius:50%;border:1px solid var(--line)}
+.emblem figcaption{margin-top:10px;max-width:220px;font-size:.75rem;color:var(--ink-2);text-align:center}
+@media (max-width:640px){.hero-grid{grid-template-columns:1fr;gap:28px}.emblem img{width:160px;height:160px}.emblem figcaption{max-width:160px}}
 section{padding:48px 0;border-bottom:1px solid var(--line)}
 section h2{margin-bottom:18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
@@ -49,10 +54,10 @@ section h2{margin-bottom:18px}
 .pi .facts{font-size:.95rem;color:var(--ink-2);line-height:1.75}
 .pi .facts strong{color:var(--ink);font-weight:500}
 .questions{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:12px}
-.questions li{padding:14px 18px;background:var(--accent-soft);border-radius:4px;max-width:70ch}
-.pubs li{margin:.6rem 0;max-width:80ch}
+.questions li{padding:14px 18px;background:var(--accent-soft);border-radius:4px}
+.pubs li{margin:.6rem 0}
 ul.plain{padding-left:1.1rem}
-.status{background:var(--accent-soft);border-radius:4px;padding:14px 18px;font-size:.95rem;max-width:70ch}
+.status{background:var(--accent-soft);border-radius:4px;padding:14px 18px;font-size:.95rem}
 footer{padding:36px 0 56px;font-size:.88rem;color:var(--ink-2)}
 footer .cols{display:flex;flex-wrap:wrap;gap:24px 48px}
 footer p{margin:.3rem 0}
@@ -75,9 +80,17 @@ footer p{margin:.3rem 0}
 
 <div class="hero"><div class="wrap">
   <div class="eyebrow">Faculty of Architecture and Town Planning · Technion – Israel Institute of Technology</div>
-  <h1>InSites Knowledge Lab</h1>
-  <p class="sub">Computational and knowledge-modelling methods in the assessment of built cultural heritage</p>
-  <p class="aff">Head: <a href="https://architecture.technion.ac.il/members/yael-alef/">Assoc. Prof. Yael Alef</a> · Haifa, Israel · Established 2026</p>
+  <div class="hero-grid">
+    <div>
+      <h1>InSites Knowledge Lab</h1>
+      <p class="sub">Computational and knowledge-modelling methods in the assessment of built cultural heritage</p>
+      <p class="aff">Head: <a href="https://architecture.technion.ac.il/members/yael-alef/">Assoc. Prof. Yael Alef</a> · Haifa, Israel · Established 2026</p>
+    </div>
+    <figure class="emblem">
+      <img src="lab-alice.jpg" width="220" height="220" decoding="async" alt="Illustration in a classical gallery: Alice, the White Rabbit and the Hatter face a luminous figure drawn as a knowledge graph, among heritage objects, a statue and a robot.">
+      <!-- <figcaption>AI-generated illustration · emblem of the InSites workshops</figcaption> -->
+    </figure>
+  </div>
 </div></div>
 
 <section id="research"><div class="wrap">
